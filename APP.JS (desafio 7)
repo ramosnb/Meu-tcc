@@ -4,8 +4,8 @@ import {NavigationContainer} from '@react-navigation/native';
 import {createNativeStackNavigator} from '@react-navigation/native-stack ' ;
 
 
-import TelaLogin from '. / telas/Te1aLogin' ;
-import Telalnicial from './te1as/Te1aInicia1' ;
+import TelaLogin from '. / telas/Tela1Login' ;
+import Telalnicial from './te1as/Tela1Inicia1' ;
 
 class App extends Component{
 render(){
