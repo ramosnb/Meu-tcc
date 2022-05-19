@@ -17,7 +17,7 @@ class Telalnicial extends Component
         </View>
 <View style = {estilos.areaTitulo}>
 <Text style = {estilos.titulo}>DSV MOBILE</Text>
-<Text style = {estilos.titulo}>AULA 07</Text>
+<Text style = {estilos.titulo}>DSV</Text>
 </View>
 <View style = {estilos.areaSubTitulo}>
 <Text style = {estilos.subTitulo}>Passagem de Parametro entre Telas</Text>
