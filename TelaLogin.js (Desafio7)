@@ -112,7 +112,7 @@ render(){
             </TouchabLeOpacity>
         </View>
         <View style={estilos.areaRodape}>
-        <Text style={estilos.rodape}>Luiz Fernando Corcini</Text>
+        <Text style={estilos.rodape}>Gui</Text>
                 <Text style={estilos.rodape}>2022</Text>
 
                 </View>
