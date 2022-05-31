@@ -30,7 +30,7 @@ class Telalnicial extends Component
 <View style = {estilos.areaRodape}>
 <Text style = {estilos.rodape}>Luiz Fernando Corcini</Text>
 <Text style = {estilos.rodape}>2022</Text>
-  </View>
+  </View> 
 
 </View >
 
