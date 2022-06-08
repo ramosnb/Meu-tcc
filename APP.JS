@@ -15,7 +15,7 @@ return(
 <StatusBar backgroundCoLor= 'darkred' barStyLe='light-content' />
 <Stack.Navigator>
 <Stack.Screen name = "Telalnicial" component= {Telalnicial}
-options={{headerShown:false}}/>
+options={{headerShown:false}}/> 
 <Stack.Screen name = "TelaLogin" component = {TelaLogin}
 options={{headerShown:false}}/>
 </Stack.Navigator>
