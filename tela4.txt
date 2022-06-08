@@ -115,4 +115,4 @@ btnDados: {
   justifyContent:'center',
   marginBottom: 10
 }
-});
+}); 
