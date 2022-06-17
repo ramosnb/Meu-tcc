@@ -1,28 +1,77 @@
-import React, {Component} from 'react';
-import { StatusBar } from 'expo-status-bar' ;
-import {NavigationContainer} from '@react-navigation/native';
-import {createNativeStackNavigator} from '@react-navigation/native-stack ' ;
+import React, {useState, useEffect} from 'react';
+import { StyleSheet, Text, View } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
+import { createStackNavigator } from '@react-navigation/stack';
 
+import Home from './Telas/Home';
+import Login from './Telas/Login';
+import Cadastro from './Telas/Cadastro';
+import Principal from './Telas/Principal';
 
-import TelaLogin from '. / telas/Tela1Login' ;
-import Telalnicial from './te1as/Tela1Inicia1' ;
+export default function App() {
 
-class App extends Component{
-render(){
-const Stack = createNativeStackNavigator ();
-return(
-<NavigationContainer>
-<StatusBar backgroundCoLor= 'darkred' barStyLe='light-content' />
-<Stack.Navigator>
-<Stack.Screen name = "Telalnicial" component= {Telalnicial}
-options={{headerShown:false}}/> 
-<Stack.Screen name = "TelaLogin" component = {TelaLogin}
-options={{headerShown:false}}/>
-</Stack.Navigator>
-</NavigationContainer>
+  const Stack = createStackNavigator();
 
-);
+  return (
+    <NavigationContainer>
+        <Stack.Navigator>
+          <Stack.Screen 
+          name="Home" 
+          component={Home}
+          options={{
+            
+            title:"Bem vindo ao Easy Parking!",
+            headerStyle:{backgroundColor:"#6E7B8B"},
+            headerTintColor:'#333',
+            headerTitleStyle:{ fontWeight:'bold', alignSelf:'center', color: '#98F5FF'}
+          }}
+           />
+          <Stack.Screen 
+          name="Login" 
+          component={Login}
+          options={{
+            title:"Realize seu login no Easy Parking!",
+            headerStyle:{backgroundColor:"#6E7B8B"},
+            headerTintColor:'#333',
+            headerTitleStyle:{ fontWeight:'bold', alignSelf:'center', color: '#98F5FF'}
+          
+          }}
+
+          />
+          <Stack.Screen
+          name="Cadastro" 
+          component={Cadastro} 
+          options={{
+            title:"Cadastre-se!",
+            headerStyle:{backgroundColor:"#6E7B8B"},
+            headerTintColor:'#333',
+            headerTitleStyle:{ fontWeight:'bold', alignSelf:'center', color: '#98F5FF'}
+          }}
+          
+          />
+
+         <Stack.Screen
+            name="Principal" 
+            component={Principal} 
+            options={{
+            title:"Easy Parking!",
+            headerStyle:{backgroundColor:"#6E7B8B"},
+            headerTintColor:'#333',
+            headerTitleStyle:{ fontWeight:'bold', alignSelf:'center', color: '#98F5FF'}
+          }}
+          
+          />
+                
+        </Stack.Navigator>
+      </NavigationContainer>
+  );
 }
-}
 
-export default App;
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    backgroundColor: '#fff',
+    alignItems: 'center',
+    justifyContent: 'center',
+  },
+});
