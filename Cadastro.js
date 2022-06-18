@@ -1,63 +1,53 @@
+
 import { StyleSheet, Text, View, TextInput, Button, TouchableOpacity, Touchable, TouchableOpacityComponent, TouchableHighlight } from 'react-native';
 import React, {useState} from 'react'; 
+import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth';
+import { auth } from './Firebase';
+import { Input } from 'react-native-elements';
 
 export default function Cadastro(props) {
 
-  
-    const [email, setEmail] = useState(null);
-    const [senha, setSenha] = useState(null);
-    const [placa, setPlaca] = useState(null);
-    const [erroEmail, setErroEmail] = useState(null);
-    const [erroSenha, setErroSenha] = useState(null);
-    const [erroPlaca, setErroPlaca] = useState(null);
+    const [email, setEmail] = useState('');
+    const [senha, setSenha] = useState('');
+    
+    async function createUser(){
+      await createUserWithEmailAndPassword(auth, email, senha)
+      .then(value => {
+        console.log('cadastrado com sucesso! \n' + value.user.uid);
+      })
+      .catch(error => console.log(error));
 
-    const validar = () =>{
-      setErroEmail("Tipo de e-mail incorreto!")
-      return false
+    };
 
+    async function login(){
+      await signInWithEmailAndPassword(auth, email, senha)
+      .then(value => {
+        console.log('Login realizado!');
+      })
+      .catch(error => console.log(error));
 
-    }
+    };
 
-    const salvar = () =>{
-      if (validar()){
-        console.log("salvou")
-      }
-    }
-
-    const login = () =>{
-  
-      alert('DIRECIONANDO PARA TELA DE LOGIN!');
-  
-    }
-  
-    const cadastro = () => {
-      
-  
-      alert('Cadastro efetuado com sucesso!');
-      
-    }
     console.log(props);
     return (
         <View style={styles.container}>
       
-      <TextInput
+      <Input
       placeholder= "E-mail" 
       style={styles.textInput} 
       onChangeText={ value=>setEmail(value)}
       keyboardType="email-address"
-      errorMessage={erroEmail}
+      leftIcon={{ type: 'font-awesome', name: 'envelope' }}
+      
       />
-      <TextInput secureTextEntry={true}
+      <Input secureTextEntry={true}
        placeholder= "Digite uma senha" 
        style={styles.textInput} 
-       onChangeText={ text=>setSenha(text)}
-       errorMessage={erroSenha}
+       onChangeText={ value=>setSenha(value)}
+       leftIcon={{ type: 'font-awesome', name: 'key' }}
+       
        />
-      <TextInput placeholder= "Digite a placa do veiculo" 
-      style={styles.textInput} 
-      onChangeText={ text=>setPlaca(text)}
-      errorMessage={erroPlaca}
-      />
+      
 
    <TouchableHighlight 
    style={styles.btnTelaLogin} 
@@ -69,7 +59,7 @@ export default function Cadastro(props) {
 
    <TouchableHighlight 
    style={styles.btnCadastro} 
-   onPress={()=>cadastro()}
+   onPress={()=>createUser()}
    
    > 
      <Text style={{color:'#98F5FF', textAlign: 'center', fontWeight:'bold' }}>Cadastrar!</Text>
