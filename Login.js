@@ -1,7 +1,6 @@
 import { Image, KeyboardAvoidingView, StyleSheet, Text, View, TextInput, Button, TouchableOpacity, Touchable, TouchableOpacityComponent, TouchableHighlight } from 'react-native';
 import React, {useState} from 'react'; 
-
-
+import { Input } from 'react-native-elements';
 
 
 export default function Login(props)
@@ -17,24 +16,25 @@ export default function Login(props)
         <View style={styles.container}>
 
          
-<TextInput 
+<Input 
 placeholder= "Seu e-mail" 
 style={styles.textInput} 
-onChangeText={ text=>setEmail(text)}/>
+onChangeText={ text=>setEmail(text)}
+leftIcon={{ type: 'AntDesign', name: 'login' }}/>
 
 
-<TextInput 
+<Input 
 secureTextEntry={true} 
 placeholder= "Digite sua senha" 
 style={styles.textInput} 
-onChangeText={ text=>setSenha(text)}/>
+onChangeText={ text=>setSenha(text)}
+leftIcon={{ type: 'AntDesign', name: 'login' }}/>
 
 <TouchableHighlight 
 style={styles.btnLogar}
  onPress={()=>props.navigation.navigate('Principal')}> 
 <Text style={{color:'#98F5FF', textAlign: 'center', fontWeight:'bold' }}>Esqueci minha senha</Text>
    </TouchableHighlight>
-
 
 <TouchableHighlight 
 title='Ir a tela principal'
