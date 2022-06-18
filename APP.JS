@@ -1,77 +1,33 @@
-import React, {useState, useEffect} from 'react';
-import { StyleSheet, Text, View } from 'react-native';
-import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
-
-import Home from './Telas/Home';
-import Login from './Telas/Login';
-import Cadastro from './Telas/Cadastro';
-import Principal from './Telas/Principal';
-
-export default function App() {
-
-  const Stack = createStackNavigator();
-
-  return (
-    <NavigationContainer>
-        <Stack.Navigator>
-          <Stack.Screen 
-          name="Home" 
-          component={Home}
-          options={{
-            
-            title:"Bem vindo ao Easy Parking!",
-            headerStyle:{backgroundColor:"#6E7B8B"},
-            headerTintColor:'#333',
-            headerTitleStyle:{ fontWeight:'bold', alignSelf:'center', color: '#98F5FF'}
-          }}
-           />
-          <Stack.Screen 
-          name="Login" 
-          component={Login}
-          options={{
-            title:"Realize seu login no Easy Parking!",
-            headerStyle:{backgroundColor:"#6E7B8B"},
-            headerTintColor:'#333',
-            headerTitleStyle:{ fontWeight:'bold', alignSelf:'center', color: '#98F5FF'}
-          
-          }}
-
-          />
-          <Stack.Screen
-          name="Cadastro" 
-          component={Cadastro} 
-          options={{
-            title:"Cadastre-se!",
-            headerStyle:{backgroundColor:"#6E7B8B"},
-            headerTintColor:'#333',
-            headerTitleStyle:{ fontWeight:'bold', alignSelf:'center', color: '#98F5FF'}
-          }}
-          
-          />
-
-         <Stack.Screen
-            name="Principal" 
-            component={Principal} 
-            options={{
-            title:"Easy Parking!",
-            headerStyle:{backgroundColor:"#6E7B8B"},
-            headerTintColor:'#333',
-            headerTitleStyle:{ fontWeight:'bold', alignSelf:'center', color: '#98F5FF'}
-          }}
-          
-          />
-                
-        </Stack.Navigator>
-      </NavigationContainer>
-  );
+{
+  "expo": {
+    "name": "meu_tcc",
+    "slug": "meu_tcc",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./assets/icon.png",
+    "userInterfaceStyle": "light",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#ffffff"
+    },
+    "updates": {
+      "fallbackToCacheTimeout": 0
+    },
+    "assetBundlePatterns": [
+      "**/*"
+    ],
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#FFFFFF"
+      }
+    },
+    "web": {
+      "favicon": "./assets/favicon.png"
+    }
+  }
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
