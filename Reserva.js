@@ -17,6 +17,14 @@ export default function Reserva(props)
         <Picker.Item label ="A1" value= "A1" />
         <Picker.Item label ="A2" value= "A2" />
         <Picker.Item label ="A3" value= "A3" />
+        <Picker.Item label ="A4" value= "A4" />
+        <Picker.Item label ="A5" value= "A5" />
+        <Picker.Item label ="A6" value= "A6" />
+        <Picker.Item label ="A7" value= "A7" />
+        <Picker.Item label ="A8" value= "A8" />
+        <Picker.Item label ="A9" value= "A9" />
+        <Picker.Item label ="B1" value= "B1" />
+        <Picker.Item label ="B2" value= "B2" />
     </Picker>
 </View>
 
@@ -27,17 +35,17 @@ export default function Reserva(props)
 <Text style={{color:'#98F5FF', textAlign: 'center', fontWeight:'bold', fontVariant: 'oldstyle-nums' }}>Turno Manhã</Text>
 </TouchableHighlight>
 
-<TouchableHighlight  
+<TouchableHighlight 
       title='Turno Noite'
       style={styles.btnReservar}
       onPress={()=>props.navigation.navigate('')}> 
-<Text style={{color:'#98F5FF', textAlign: 'center', fontWeight:'bold', fontVariant: 'oldstyle-nums' }}>Turno</Text>
+<Text style={{color:'#98F5FF', textAlign: 'center', fontWeight:'bold', fontVariant: 'oldstyle-nums' }}>Turno Noite</Text>
 </TouchableHighlight>
 
 <TouchableHighlight 
       title='Confirmar'
       style={styles.btnConfirmar}
-      onPress={()=>props.navigation.navigate('*******')}> 
+      onPress={()=>props.navigation.navigate('Pagamento')}> 
 <Text style={{color:'#98F5FF', textAlign: 'center', fontWeight:'bold', fontVariant: 'oldstyle-nums' }}>Confirmar</Text>
 </TouchableHighlight>
       
@@ -92,6 +100,7 @@ btnConfirmar: {
         borderRadius: 20,
         justifyContent:'center',
         marginBottom: 10
+        
 
 },
 
