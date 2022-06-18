@@ -27,7 +27,7 @@ export default function Reserva(props)
 <Text style={{color:'#98F5FF', textAlign: 'center', fontWeight:'bold', fontVariant: 'oldstyle-nums' }}>Turno Manhã</Text>
 </TouchableHighlight>
 
-<TouchableHighlight 
+<TouchableHighlight  
       title='Turno Noite'
       style={styles.btnReservar}
       onPress={()=>props.navigation.navigate('')}> 
