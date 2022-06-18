@@ -9,6 +9,7 @@ import Cadastro from './Telas/Cadastro';
 import Principal from './Telas/Principal';
 import Reserva from './Telas/Reserva';
 import Pagamento from './Telas/Pagamento';
+import Feedback from './Telas/Feedback';
 
 export default function App() {
 
@@ -87,6 +88,20 @@ export default function App() {
           }}
           
           />
+
+                  <Stack.Screen
+            name="Feedback" 
+            component={Feedback} 
+            options={{
+            title:"Feedback",
+            headerStyle:{backgroundColor:"#6E7B8B"},
+            headerTintColor:'#333',
+            headerTitleStyle:{ fontWeight:'bold', alignSelf:'center', color: '#98F5FF'}
+}}
+
+/>
+
+          
           
                 
         </Stack.Navigator>
