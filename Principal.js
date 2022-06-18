@@ -13,20 +13,16 @@ export default function Principal(props)
       title='Minha conta'
       style={styles.btnConta}
       onPress={()=>props.navigation.navigate('')}> 
-<Text style={{color:'#98F5FF', textAlign: 'left', fontWeight:'bold', fontVariant: 'oldstyle-nums' }}>Minha conta</Text>
+<Text style={{color:'#98F5FF', textAlign: 'center', fontWeight:'bold', fontVariant: 'oldstyle-nums' }}>Minha conta</Text>
 </TouchableHighlight>
 
 <TouchableHighlight 
       title='Reservar'
       style={styles.btnReservar}
-      onPress={()=>props.navigation.navigate('')}> 
-<Text style={{color:'#98F5FF', textAlign: 'left', fontWeight:'bold', fontVariant: 'oldstyle-nums' }}>Reservar Vaga</Text>
+      onPress={()=>props.navigation.navigate('Reserva')}> 
+<Text style={{color:'#98F5FF', textAlign: 'center', fontWeight:'bold', fontVariant: 'oldstyle-nums' }}>Reservar Vaga</Text>
 </TouchableHighlight>
-
-
-        
-
-            
+      
         </View>
     );
 }
