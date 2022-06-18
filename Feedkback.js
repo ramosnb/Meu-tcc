@@ -1,4 +1,4 @@
-import { StyleSheet, Text, View, TextInput, Button, TouchableOpacity, Touchable, TouchableOpacityComponent, TouchableHighlight } from 'react-native';
+import { StyleSheet, Text, View, TextInput, Button, TouchableOpacity, Touchable, TouchableOpacityComponent,Image, TouchableHighlight } from 'react-native';
 import React, {useState} from 'react'; 
 import Slider from '@react-native-community/slider'
 import { Input } from 'react-native-elements';
@@ -15,44 +15,52 @@ export default function Feedback(props)
             <View style={styles.selecionador}>
             <Text> Gostou dos nossos serviços?, Nos avalie!!</Text>
             <Text>⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇</Text>
+            
 </View>
 
 
 
-<TouchableHighlight 
+
+
+
+<TouchableOpacity
       title='1'
       style={styles.btn1}
       onPress={()=>props.navigation.navigate('')}> 
-<Text style={{color:'#98F5FF', textAlign: 'center', fontWeight:'bold', fontVariant: 'oldstyle-nums' }}>1</Text>
-</TouchableHighlight>
+<Image source={require('../image/star.png')} style={{width: 50, height: 50}} />
 
-<TouchableHighlight 
-      title='2'
-      style={styles.btn2}
+</TouchableOpacity>
+
+<TouchableOpacity
+      title='1'
+      style={styles.btn1}
       onPress={()=>props.navigation.navigate('')}> 
-<Text style={{color:'#98F5FF', textAlign: 'center', fontWeight:'bold', fontVariant: 'oldstyle-nums' }}>2</Text>
-</TouchableHighlight>
+<Image source={require('../image/star.png')} style={{width: 50, height: 50}} />
+
+</TouchableOpacity>
       
-<TouchableHighlight 
-      title='3'
-      style={styles.btn3}
+<TouchableOpacity
+      title='1'
+      style={styles.btn1}
       onPress={()=>props.navigation.navigate('')}> 
-<Text style={{color:'#98F5FF', textAlign: 'center', fontWeight:'bold', fontVariant: 'oldstyle-nums' }}>3</Text>
-</TouchableHighlight>
+<Image source={require('../image/star.png')} style={{width: 50, height: 50}} />
 
-<TouchableHighlight 
-      title='3'
-      style={styles.btn3}
-      onPress={()=>props.navigation.navigate('')}> 
-<Text style={{color:'#98F5FF', textAlign: 'center', fontWeight:'bold', fontVariant: 'oldstyle-nums' }}>4</Text>
-</TouchableHighlight>
+</TouchableOpacity>
 
-<TouchableHighlight 
-      title='3'
-      style={styles.btn3}
+<TouchableOpacity
+      title='1'
+      style={styles.btn1}
       onPress={()=>props.navigation.navigate('')}> 
-<Text style={{color:'#98F5FF', textAlign: 'center', fontWeight:'bold', fontVariant: 'oldstyle-nums' }}>5</Text>
-</TouchableHighlight>
+<Image source={require('../image/star.png')} style={{width: 50, height: 50}} />
+
+</TouchableOpacity>
+<TouchableOpacity
+      title='1'
+      style={styles.btn1}
+      onPress={()=>props.navigation.navigate('')}> 
+<Image source={require('../image/star.png')} style={{width: 50, height: 50}} />
+
+</TouchableOpacity>
 
         </View>
     );
@@ -69,61 +77,6 @@ const styles = StyleSheet.create({
             justifyContent: 'center',
             padding: 180
     
-},
-
-btn1: {
-    width:'30%',
-        height:30,
-        backgroundColor:'#6E7B8B',
-        borderRadius: 20,
-        justifyContent:'center',
-        marginBottom: 10
-        
-
-},
-
-btn2: {
-    width:'30%',
-        height:30,
-        backgroundColor:'#6E7B8B',
-        borderRadius: 20,
-        justifyContent:'center',
-        marginBottom: 10
-        
-
-},
-
-btn3: {
-    width:'30%',
-        height:30,
-        backgroundColor:'#6E7B8B',
-        borderRadius: 20,
-        justifyContent:'center',
-        marginBottom: 10
-        
-
-},
-
-btn4: {
-    width:'30%',
-        height:30,
-        backgroundColor:'#6E7B8B',
-        borderRadius: 20,
-        justifyContent:'center',
-        marginBottom: 10
-        
-
-},
-
-btn5: {
-    width:'30%',
-        height:30,
-        backgroundColor:'#6E7B8B',
-        borderRadius: 20,
-        justifyContent:'center',
-        marginBottom: 10
-        
-
 },
 
 });
