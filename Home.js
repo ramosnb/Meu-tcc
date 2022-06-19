@@ -61,6 +61,6 @@ BtnTelaCadastro: {
       justifyContent:'center',
       marginBottom: 10
       
-}
+} 
 
 });
