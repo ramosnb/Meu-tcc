@@ -1,4 +1,3 @@
-
 import { StyleSheet, Text, View, TextInput, Button, TouchableOpacity, Touchable, TouchableOpacityComponent, TouchableHighlight } from 'react-native';
 import React, {useState} from 'react'; 
 import { getAuth, createUserWithEmailAndPassword, signInWithEmailAndPassword } from 'firebase/auth';
@@ -31,6 +30,8 @@ export default function Cadastro(props) {
     console.log(props);
     return (
         <View style={styles.container}>
+
+            
       
       <Input
       placeholder= "E-mail" 
