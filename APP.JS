@@ -2,6 +2,12 @@ import React, {useState, useEffect} from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { createStackNavigator } from '@react-navigation/stack';
+import "firebase/auth";
+import firebase from 'firebase/app';
+import 'firebase/compat/auth';
+import 'firebase/compat/firestore';
+
+
 
 import Home from './Telas/Home';
 import Login from './Telas/Login';
@@ -10,6 +16,7 @@ import Principal from './Telas/Principal';
 import Reserva from './Telas/Reserva';
 import Pagamento from './Telas/Pagamento';
 import Feedback from './Telas/Feedback';
+import Conta from './Telas/Conta';
 
 export default function App() {
 
@@ -101,9 +108,18 @@ export default function App() {
 
 />
 
-          
-          
-                
+<Stack.Screen
+            name="Conta" 
+            component={Conta} 
+            options={{
+            title:"Minha Conta",
+            headerStyle:{backgroundColor:"#6E7B8B"},
+            headerTintColor:'#333',
+            headerTitleStyle:{ fontWeight:'bold', alignSelf:'center', color: '#98F5FF'}
+}}
+
+/>
+                  
         </Stack.Navigator>
       </NavigationContainer>
   );
@@ -115,5 +131,6 @@ const styles = StyleSheet.create({
     backgroundColor: '#fff',
     alignItems: 'center',
     justifyContent: 'center',
-  }, 
+  },
+
 });
