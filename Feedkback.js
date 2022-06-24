@@ -23,44 +23,41 @@ export default function Feedback(props)
 
 <View
 style={styles.btnEstrelas}>
-<TouchableOpacity
+<button
       title='1'
-      
-      onPress={()=>props.navigation.navigate('')}> 
-<Image source={require('../Image/estrela.png')} style={{width: 50, height: 50}} />
+      onClick={() => {
+            (alert('Obrigado pelo feedback, estaremos melhorando!'));
+          }}
+          > <Image source={require('../estrela.png')} style={{width: 50, height: 50}} /></button>
 
-</TouchableOpacity>
 
-<TouchableOpacity
+<button
       title='1'
+      onClick={() => {
+            (alert('Obrigado pelo feedback, estaremos melhorando!'));
+          }}
+          > <Image source={require('../estrela.png')} style={{width: 50, height: 50}} /></button>
       
-      onPress={()=>props.navigation.navigate('')}> 
-<Image source={require('../Image/estrela.png')} style={{width: 50, height: 50}} />
-
-</TouchableOpacity>
-      
-<TouchableOpacity
+      <button
       title='1'
-      
-      onPress={()=>props.navigation.navigate('')}> 
-<Image source={require('../Image/estrela.png')} style={{width: 50, height: 50}} />
+      onClick={() => {
+            (alert('Agradeçemos a sua colaboração'));
+          }}
+          > <Image source={require('../estrela.png')} style={{width: 50, height: 50}} /></button>
 
-</TouchableOpacity>
-
-<TouchableOpacity
+<button
       title='1'
-     
-      onPress={()=>props.navigation.navigate('')}> 
-<Image source={require('../Image/estrela.png')} style={{width: 50, height: 50}} />
-
-</TouchableOpacity>
-<TouchableOpacity
+      onClick={() => {
+            (alert('Obrigado por utilizar nossos serviços'));
+          }}
+          > <Image source={require('../estrela.png')} style={{width: 50, height: 50}} /></button>
+          
+<button
       title='1'
-      
-      onPress={()=>props.navigation.navigate('')}> 
-<Image source={require('../Image/estrela.png')} style={{width: 50, height: 50}} />
-
-</TouchableOpacity>
+      onClick={() => {
+            (alert('Ficamos contentes com a sua satisfação'));
+          }}
+          > <Image source={require('../estrela.png')} style={{width: 50, height: 50}} /></button>
 
 </View>
         </View>
@@ -71,19 +68,20 @@ const styles = StyleSheet.create({
 
     container: {
             
-            height:90,
-            flex: 1,
+            height:150,
+            flex: 30,
             backgroundColor: '#98F5FF',
             alignItems: 'center',
             justifyContent: 'center',
-            padding:600
+            padding:400
     
 },
 btnEstrelas: {
     flex: 1,
     flexDirection: 'row',
     alignItems: 'center',
-            justifyContent: 'center',
+    justifyContent: 'center',
+    background: "blue"
 }
 
 
