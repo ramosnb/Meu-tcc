@@ -60,12 +60,10 @@ export default function Cadastro(props) {
 
    <TouchableHighlight 
    style={styles.btnCadastro} 
-   onPress={()=>createUser()}
-   
-   > 
-     <Text style={{color:'#98F5FF', textAlign: 'center', fontWeight:'bold' }}>Cadastrar!</Text>
+   onPress={()=>createUser()
+    (alert('Cadastro Efetuado com sucesso!'))}>
+<Text style={{color:'#98F5FF', textAlign: 'center', fontWeight:'bold' }}>Cadastrar!</Text>
    </TouchableHighlight>
-   
 
     </View>
     );
