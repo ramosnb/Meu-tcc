@@ -53,7 +53,7 @@ e instala todas essas dependencias:
    npm install stripe 
    
    
-   Apos isso dentro do direitorio do projeto no cmd, vamos rodar o projeto -> expo start
+   Apos isso dentro do direitorio do projeto no cmd, vamos rodar o projeto -> expo start 
    
    
    
