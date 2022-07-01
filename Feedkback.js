@@ -12,13 +12,11 @@ export default function Feedback(props)
         <View style={styles.container}>
             <Text></Text>
 
-            <View style={styles.selecionador}>
+            <View style={styles.texto}>
             <Text> Gostou dos nossos serviços?, Nos avalie!!</Text>
-            <Text>⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇</Text>
+            <Text> ⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇</Text>
             
 </View>
-
-
 
 
 <View
@@ -60,6 +58,18 @@ style={styles.btnEstrelas}>
           > <Image source={require('../estrela.png')} style={{width: 50, height: 50}} /></button>
 
 </View>
+
+<View style={styles.CaixaComentario}>
+<label>Gostaria de fazer um comentario sobre o aplicativo? sinta-se a vontade!</label>
+<input 
+type="text" 
+name="comentario" 
+
+
+/>
+
+
+</View>
         </View>
     );
 }
@@ -71,6 +81,7 @@ const styles = StyleSheet.create({
             height:150,
             flex: 30,
             backgroundColor: '#98F5FF',
+            fontSize: 20,
             alignItems: 'center',
             justifyContent: 'center',
             padding:400
@@ -81,8 +92,26 @@ btnEstrelas: {
     flexDirection: 'row',
     alignItems: 'center',
     justifyContent: 'center',
-    background: "blue"
+    background: "blue",
+    height: 40,
+},
+
+CaixaComentario: {
+  width: '25%',
+    height: 5,
+    fontSize: 20,
+    borderRadius: 20,
+    paddingLeft: 20,
+    marginBottom: 10,
+    padding: '100',
+
+},
+
+texto: {
+  fontSize:40
+
 }
+
 
 
 });
