@@ -35,10 +35,10 @@ export default function Pagamento(props)
 <Text style = {styles.titulo}>**Importante: Caso não realize o pagamento dentro de 30 minutos,a reserva sera cancelada**</Text>
 
 <TouchableHighlight 
-      title='Feedback'
+      title='Final'
       style={styles.btnInicio}
-      onPress={()=>props.navigation.navigate('Feedback')}> 
-<Text style={{color:'#98F5FF', textAlign: 'center', fontWeight:'bold', fontVariant: 'oldstyle-nums' }}>Feedback</Text>
+      onPress={()=>props.navigation.navigate('Final')}> 
+<Text style={{color:'#98F5FF', textAlign: 'center', fontWeight:'bold', fontVariant: 'oldstyle-nums' }}>Avançar</Text>
 </TouchableHighlight>
 
 <TouchableHighlight 
