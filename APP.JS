@@ -17,6 +17,10 @@ import Reserva from './Telas/Reserva';
 import Pagamento from './Telas/Pagamento';
 import Feedback from './Telas/Feedback';
 import Conta from './Telas/Conta';
+import Final from './Telas/Final';
+import manha from './Telas/manha';
+import tarde from './Telas/tarde';
+import noite from './Telas/noite';
 
 export default function App() {
 
@@ -76,7 +80,7 @@ export default function App() {
             name="Reserva" 
             component={Reserva} 
             options={{
-            title:"Pagamento apenas por pix!",
+            title:"Reserve sua vaga!",
             headerStyle:{backgroundColor:"#6E7B8B"},
             headerTintColor:'#333',
             headerTitleStyle:{ fontWeight:'bold', alignSelf:'center', color: '#98F5FF'}
@@ -113,6 +117,51 @@ export default function App() {
             component={Conta} 
             options={{
             title:"Minha Conta",
+            headerStyle:{backgroundColor:"#6E7B8B"},
+            headerTintColor:'#333',
+            headerTitleStyle:{ fontWeight:'bold', alignSelf:'center', color: '#98F5FF'}
+}}
+
+/>
+
+<Stack.Screen
+            name="Final" 
+            component={Final} 
+            options={{
+            title:"Obrigado por reservar uma vaga conosco!!",
+            headerStyle:{backgroundColor:"#6E7B8B"},
+            headerTintColor:'#333',
+            headerTitleStyle:{ fontWeight:'bold', alignSelf:'center', color: '#98F5FF'}
+}}
+
+/>
+<Stack.Screen
+            name="manha" 
+            component={manha} 
+            options={{
+            title:"Obrigado por reservar uma vaga conosco!!",
+            headerStyle:{backgroundColor:"#6E7B8B"},
+            headerTintColor:'#333',
+            headerTitleStyle:{ fontWeight:'bold', alignSelf:'center', color: '#98F5FF'}
+}}
+
+/>
+<Stack.Screen
+            name="tarde" 
+            component={tarde} 
+            options={{
+            title:"Obrigado por reservar uma vaga conosco!!",
+            headerStyle:{backgroundColor:"#6E7B8B"},
+            headerTintColor:'#333',
+            headerTitleStyle:{ fontWeight:'bold', alignSelf:'center', color: '#98F5FF'}
+}}
+
+/>
+<Stack.Screen
+            name="noite" 
+            component={noite} 
+            options={{
+            title:"Obrigado por reservar uma vaga conosco!!",
             headerStyle:{backgroundColor:"#6E7B8B"},
             headerTintColor:'#333',
             headerTitleStyle:{ fontWeight:'bold', alignSelf:'center', color: '#98F5FF'}
