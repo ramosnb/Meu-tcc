@@ -10,12 +10,11 @@ export default function Feedback(props)
     return (
         
         <View style={styles.container}>
-            <Text></Text>
 
-            <View style={styles.texto}>
-            <Text> Gostou dos nossos serviços?, Nos avalie!!</Text>
-            <Text> ⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇</Text>
-            
+
+            <View style={styles.texto}>          
+            <Text style = {styles.titulo}>Gostou dos nossos serviços?, Nos avalie!!</Text>
+            <Text style = {styles.titulo}>⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇</Text>
 </View>
 
 
@@ -24,34 +23,34 @@ style={styles.btnEstrelas}>
 <button
       title='1'
       onClick={() => {
-            (alert('Obrigado pelo feedback, estaremos melhorando!'));
+            alert('Obrigado pelo feedback, estaremos melhorando!');
           }}
           > <Image source={require('../estrela.png')} style={{width: 50, height: 50}} /></button>
 
 
 <button
-      title='1'
+      title='2'
       onClick={() => {
             (alert('Obrigado pelo feedback, estaremos melhorando!'));
           }}
           > <Image source={require('../estrela.png')} style={{width: 50, height: 50}} /></button>
       
       <button
-      title='1'
+      title='3'
       onClick={() => {
             (alert('Agradeçemos a sua colaboração'));
           }}
           > <Image source={require('../estrela.png')} style={{width: 50, height: 50}} /></button>
 
 <button
-      title='1'
+      title='4'
       onClick={() => {
             (alert('Obrigado por utilizar nossos serviços'));
           }}
           > <Image source={require('../estrela.png')} style={{width: 50, height: 50}} /></button>
           
 <button
-      title='1'
+      title='5'
       onClick={() => {
             (alert('Ficamos contentes com a sua satisfação'));
           }}
@@ -60,10 +59,10 @@ style={styles.btnEstrelas}>
 </View>
 
 <View style={styles.CaixaComentario}>
-<label>Gostaria de fazer um comentario sobre o aplicativo? sinta-se a vontade!</label>
-<input 
-type="text" 
-name="comentario" 
+         <label>Gostaria de fazer um comentario sobre o aplicativo? sinta-se a vontade!</label>
+             <input 
+            type="text" 
+                name="comentario" 
 
 
 />
@@ -97,20 +96,29 @@ btnEstrelas: {
 },
 
 CaixaComentario: {
-  width: '25%',
-    height: 5,
-    fontSize: 20,
+  width: '55%',
+    height: 40,
     borderRadius: 20,
     paddingLeft: 20,
     marginBottom: 10,
     padding: '100',
+    fontSize:25,
+    fontWeight: 'bold',
+    color: 'blue',
 
 },
 
 texto: {
   fontSize:40
 
-}
+},
+titulo: {
+  fontSize:17,
+  fontWeight: 'bold',
+  color: 'blue',
+  height:60
+  
+},
 
 
 
